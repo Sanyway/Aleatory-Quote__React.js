@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import QuoteBox from './assets/components/QuoteBox'
 import quotes from './assets/json/quotes.json'
 import color from './assets/utils/color'
-import Boton from './assets/components/Boton'
 
 function App() {
 
@@ -13,13 +11,9 @@ function App() {
 
   const getIndexRandom = arr => Math.floor(Math.random() * arr.length) 
 
-  const firstElement = quotes[getIndexRandom(quotes)]
-  const firstColor = color[getIndexRandom(color)]
-  const secondColor = color[getIndexRandom(color)]
-
-  const [randomQuote, setRandomQuote] = useState(firstElement)
-  const [randomColor, setRandomColor] = useState(firstColor)
-  const [randomSecondColor, setRandomSecondColor] = useState(secondColor)
+  const [randomQuote, setRandomQuote] = useState(getIndexRandom(quotes))
+  const [randomColor, setRandomColor] = useState(getIndexRandom(color))
+  const [randomSecondColor, setRandomSecondColor] = useState(getIndexRandom(color))
 
   const backgroundObject = {
     backgroundColor: randomColor,
