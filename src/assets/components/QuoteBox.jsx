@@ -21,7 +21,7 @@ const QuoteBox = ({randomQuote, randomColor, getRandom, randomSecondColor}) => {
     <p className="card_quote">{randomQuote.quote}</p>
     <h1 className="card_author">{randomQuote.author}</h1>
     </div>
-    <div className='card_boton'>
+    <div className='card_btn-container'>
     <Boton getRandom={getRandom} randomSecondColor={randomSecondColor}/>
     </div>
 

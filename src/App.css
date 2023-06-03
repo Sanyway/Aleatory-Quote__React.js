@@ -24,7 +24,7 @@ h1 {
     position: fixed;
     border-radius: 10px;
     height: 80vh;
-    width: 80%;
+    width: 80vw;
     border: 8px solid;
     border-color: #a17878;
     background-color: transparent;
@@ -41,25 +41,28 @@ h1 {
     background-color: transparent;
 
 }
-.text {
-    min-height: 100px;
-}
+
 
 .card {
-    background-color: white;
+    background-color: #b3a6a671;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 15px green;
     width: 400px;
     margin: 20px;
 
-
+.card_quote {
+    margin-bottom: 10px;
+}
 
 }
 
+.card_btn-contanier {
+    position: relative;
+}
 .card_btn {
-    position: fixed;
-    bottom: 30vh;
+    position: absolute;
+    bottom: 20vh;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 50px;
@@ -83,3 +86,33 @@ h1 {
 
 
 }
+
+
+@media (max-width: 700px) {
+
+    .app_border { 
+width: 85vw;
+    }
+    .card {
+        width: 50vw;
+        color: #140c6b;
+        color: #000000;
+        
+    }
+    .card_quote {
+font-size: 15px;
+    }
+
+    .card_author {
+font-size: 20px;
+    }
+
+
+    .card_btn {
+        position: absolute;
+        bottom: 15vh;
+    }
+}
+
+
+

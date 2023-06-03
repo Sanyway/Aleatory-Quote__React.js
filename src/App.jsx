@@ -3,6 +3,7 @@ import './App.css'
 import QuoteBox from './assets/components/QuoteBox'
 import quotes from './assets/json/quotes.json'
 import color from './assets/utils/color'
+import colortext from './assets/utils/colortext'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
   const firstElement = quotes[getIndexRandom(quotes)]
   const firstColor = color[getIndexRandom(color)]
-  const secondColor = color[getIndexRandom(color)]
+  const secondColor = colortext[getIndexRandom(colortext)]
 
   const [randomQuote, setRandomQuote] = useState(firstElement)
   const [randomColor, setRandomColor] = useState(firstColor)
@@ -27,7 +28,7 @@ function App() {
   const getRandom = () => {
     setRandomQuote(quotes[getIndexRandom(quotes)])
     setRandomColor(color[getIndexRandom(color)])
-    setRandomSecondColor(color[getIndexRandom(color)])
+    setRandomSecondColor(colortext[getIndexRandom(colortext)])
   }
 
   return (
